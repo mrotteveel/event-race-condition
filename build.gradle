@@ -1,0 +1,23 @@
+group 'nl.lawinegevaar'
+version '1.0-SNAPSHOT'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '3.4.1'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'nl.lawinegevaar.event.race.Application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.firebirdsql.jdbc', name: 'jaybird-jdk18', version: '3.0.0-beta-3'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
