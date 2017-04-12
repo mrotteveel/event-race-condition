@@ -190,7 +190,7 @@ public class Application {
 
     private static void printUsage(Options options) {
         HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("Application", options, true);
+        formatter.printHelp("event-race-condition", options, true);
     }
 
     private static String buildJdbcUrl() {
